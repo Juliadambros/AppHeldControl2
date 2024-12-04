@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controle.animal.controller.TelaInicialController"
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color:#939278;">
+    <top>
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="btnCadastroAnimal" text="Cadastro Animal" onAction="#handleCadastroAnimal" style="-fx-font-size: 12px; -fx-text-fill: #008000; "/>
+            <Button fx:id="btnCadastrarFazenda" text="Cadastro Fazenda" onAction="#handleCadastroFazenda" style="-fx-font-size: 12px; -fx-text-fill: #008000;"/>
+            <Button fx:id="btnPesquisaAnimal" text="Pesquisa Animal" onAction="#handlePesquisaAnimal" style="-fx-font-size: 12px; -fx-text-fill: #008000; "/>
+            <Button fx:id="btnTelaInicial" text="TelaInicial" onAction="#handleTelaInicial" style="-fx-font-size: 12px; -fx-text-fill: #FFFFFF;  -fx-background-color: #008000"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ImageView fx:id="imagem" fitWidth="300" fitHeight="300" preserveRatio="true"/>
+    </center>
+
+
+</BorderPane>

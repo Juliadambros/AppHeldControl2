@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controle.animal.controller.CadastroAnimalController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="btnCadastroAnimal" text="Cadastro Animal" onAction="#handleCadastroAnimal" style="-fx-font-size: 12px; -fx-text-fill: #008000; -fx-text-fill: #FFFFFF;  -fx-background-color: #008000 "/>
+            <Button fx:id="btnCadastrarFazenda" text="Cadastro Fazenda" onAction="#handleCadastroFazenda" style="-fx-font-size: 12px; -fx-text-fill: #008000;"/>
+            <Button fx:id="btnPesquisaAnimal" text="Pesquisa Animal" onAction="#handlePesquisaAnimal" style="-fx-font-size: 12px; -fx-text-fill: #008000; "/>
+            <Button fx:id="btnTelaInicial" text="TelaInicial" onAction="#handleTelaInicial" style="-fx-font-size: 12px; -fx-text-fill: #008000; "/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="15" alignment="CENTER">
+
+            <GridPane hgap="10" vgap="10" alignment="CENTER">
+                <Label text="Número do Brinco:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="nBrinco" promptText="Número do Brinco" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Código da Fazenda:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="fazendaId" promptText="Código da Fazenda" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Raça:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="raca" promptText="Raça" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Peso:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="peso" promptText="Peso" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Rebanho:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="rebanho" promptText="Rebanho" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Procedência:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField fx:id="procedencia" promptText="Procedência" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+            </GridPane>
+
+            <GridPane hgap="10" vgap="10" alignment="CENTER">
+                <Label text="Espécie:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <ChoiceBox fx:id="ChoiceBoxEspecial" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Sexo:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <ChoiceBox fx:id="ChoiceBoxSex" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Alimentação:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                <ChoiceBox fx:id="ChoiceBoxAlimentary" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+                <Label text="Especificação:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <ChoiceBox fx:id="ChoiceBoxSpecification" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Data de Nascimento:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                <DatePicker fx:id="datePickerNascimento" promptText="Data de Nascimento" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+                <Label text="Data de Chegada:" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+                <DatePicker fx:id="datePickerChegada" promptText="Data de Chegada" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+            </GridPane>
+
+            <GridPane hgap="10" alignment="CENTER">
+                <Button fx:id="btnCadastrar" text="Cadastrar"  GridPane.rowIndex="0" GridPane.columnIndex="0" onAction="#handleCadastrar"/>
+                <Button fx:id="btnEditar" text="Editar"  GridPane.rowIndex="0" GridPane.columnIndex="1" onAction="#handleEditar"/>
+                <Button fx:id="btnExcluir" text="Excluir"  GridPane.rowIndex="0" GridPane.columnIndex="2" onAction="#handleExcluir"/>
+            </GridPane>
+
+        </VBox>
+    </center>
+
+</BorderPane>
